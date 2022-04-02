@@ -1,0 +1,12 @@
+
+* Auto pilot tactics 1.
+* Make sure roll, pitch is on safe level. (Till program ends)
+* While distance from lander to moon is high, pilot the lander
+* to the most plain territory caught in the surface sensor.
+* If lander is close to moon to some degree, activate a main
+* thruster to make lander's falling speed low.
+* If lander is VERY close to moon, activate a mainthruster to
+* stay in the air. Change the orientation of the lander till
+* roll, pitch is same as moon surface slope and DRoll, DYaw, DPitch,
+* DX, DY should be about 0 and stay there for about 3 seconds.
+* After that, shut down the main thruster.
