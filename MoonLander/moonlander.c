@@ -12,8 +12,6 @@
 #include "moonlander.h"
 #include "ex.h"
 
-double dispersingR = 0.61;
-
 void MoonLander_SpaceshipInit()
 {
 	MoonLander_coordinate.X = 0;

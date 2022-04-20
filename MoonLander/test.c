@@ -6,6 +6,8 @@
 #include<stdlib.h>
 #include<time.h>
 #include<windows.h>
+#include<math.h>
+
 #include"physic.h"
 #include "moon.h"
 #include "moonlander.h"
@@ -84,4 +86,92 @@ void screenTestV1()
 	}
 	end();
 
+}
+
+void screenTestV2()
+{
+	int* ex;
+	int* ey;
+
+	int psize = randint(50, 200);
+	ex = malloc(sizeof(int) * 100);
+	ey = malloc(sizeof(int) * 100);
+
+	for (int i = 0; i < 100; i++)
+	{
+		ex[i] = randint(5, 995);
+		ey[i] = randint(5, 995);
+	}
+
+	double x = 553;
+	double y = 234;
+	double dx = 5;
+	double dy = 5;
+
+	while (1)
+	{
+		if (x < 100)
+		{
+			dx = 5;
+		}
+		if (900 < x)
+		{
+			dx = -5;
+		}
+		if (y < 100)
+		{
+			dy = 5;
+		}
+		if (900 < y)
+		{
+			dy = -5;
+		}
+
+		x += dx;
+		y += dy;
+		for (int a = 0; a < 18; a++)
+		{
+			for (int b = 0; b < 77; b++)
+			{
+				double px = x + b;
+				double py = y + a;
+				double t = 0;
+				for (int i = 0; i < psize; i++)
+				{
+					double q = px - ex[i];
+					double w = py - ey[i];
+					double r2 = pow(q, 2) + pow(w, 2);
+
+					if (r2 < 10000)
+					{
+						double tmp = r2 / 1000;
+						t += exp(-tmp);
+					}
+				}
+				screen_setdata(b, a, t);
+			}
+		}
+		setscreen();
+		prtScreen();
+
+		textcolor(7);
+		gotoxy(1, 5);
+		printf("x:%03lf", x);
+		gotoxy(1, 7);
+		gotoxy(1, 7);
+		printf("y:%03lf", y);
+		gotoxy(1, 9);
+		printf("z:");
+		gotoxy(1, 11);
+		printf("roll:");
+		gotoxy(1, 13);
+		printf("yaw:");
+		gotoxy(1, 15);
+		printf("pitch:");
+		textcolor(14);
+
+		Sleep(1);
+	}
+
+	end();
 }

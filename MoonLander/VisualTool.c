@@ -111,41 +111,49 @@ void prtAscii(double k)
 	{
 		printf("@");
 	}
-	else if (k > 0.8)
-	{
-		printf("&");
-	}
 	else if (k > 0.7)
 	{
-		printf("B");
-	}
-	else if (k > 0.6)
-	{
-		printf("a");
+		printf("W");
 	}
 	else if (k > 0.5)
 	{
-		printf("*");
+		printf("&");
 	}
 	else if (k > 0.4)
 	{
-		printf("=");
+		printf("B");
 	}
 	else if (k > 0.3)
 	{
-		printf("-");
+		printf("E");
 	}
 	else if (k > 0.2)
 	{
-		printf(";");
+		printf("c");
 	}
 	else if (k > 0.1)
+	{
+		printf("=");
+	}
+	else if (k > 0.6)
+	{
+		printf("*");
+	}
+	else if (k > 0.03)
+	{
+		printf(";");
+	}
+	else if (k > 0.01)
+	{
+		printf("-");
+	}
+	else if (k > 0.001)
 	{
 		printf("'");
 	}
 	else
 	{
-		printf(".");
+		printf(" ");
 	}
 }
 

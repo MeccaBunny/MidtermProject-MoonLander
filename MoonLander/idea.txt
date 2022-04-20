@@ -1,0 +1,12 @@
+/***************************************************************************************
+* Moon Surface
+* 
+* Random height on every 1000*1000 coordinate is not an ideal way to create the surface
+* of the moon. Because real surface of the moon is not just random pointed mountains
+* but series of hills which has smooth continuous slopes. This article is about how to
+* embody more realistic moon surface.
+* 
+* Place a 10~20 dots with height on 1000*1000 coordinate. Find the function of the slopes
+* using 3 points. For each surface, get the mean of the result of the function and apply
+* it as a height.
+***************************************************************************************/

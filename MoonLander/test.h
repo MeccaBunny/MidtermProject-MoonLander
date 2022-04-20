@@ -3,5 +3,6 @@
 
 void fallingTest();
 void screenTestV1();
+void screenTestV2();
 
 #endif
