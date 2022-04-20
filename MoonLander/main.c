@@ -4,6 +4,7 @@
 * 
 * todo:
 * 
+* 
 **************************************************************/
 #include<stdio.h>
 #include<stdlib.h>
@@ -14,35 +15,29 @@
 #include "moon.h"
 #include "moonlander.h"
 #include "ex.h"
+#include "VisualTool.h"
+#include "test.h"
 
-void testing();
+
+int* ex;
+int* ey;
+double* ez;
+//double screen[18][77] = { 0, };
 
 int main()
 {
-	testing();
-	
-	
+	screenTestV1();
+
+	//int psize = randint(50,200);
+	//ex = malloc(sizeof(int) * 100);
+	//ey = malloc(sizeof(int) * 100);
+	//
+	//for (int i = 0; i < 100; i++)
+	//{
+	//	ex[i] = randint(5, 995);
+	//	ey[i] = randint(5, 995);
+	//}
+
 	return 0;
 }
 
-void testing()
-{
-	system("color 1f");
-	srand((unsigned int)time(NULL)); t = clock(); double starting_time = t;
-	MoonLander_SpaceshipInit();
-
-	MoonLander_coordinate.DDZ = -10;
-
-	int i = 0;
-	while (1)
-	{
-		if (i > 3000) { break; }
-		dt = (double)clock() - t; t = clock(); MoonLander_phsics(dt);
-
-		printf("%d  \t  runtime: %lf(s)  \t  rocket's z coordinate: %f(m)  \n", i, (double)(clock() - starting_time) / 1000, MoonLander_coordinate.Z);
-
-		Sleep(1);
-		i++;
-	}
-	endMoon();
-}

@@ -2,8 +2,6 @@
 #define MOON
 
 //MoonSurface
-int moonSize;
-float* MoonSurface;
 void MoonSurface_create();
 void endMoon();
 

@@ -27,6 +27,12 @@
     <ClCompile Include="ex.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="VisualTool.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="test.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="moonlander.h">
@@ -41,9 +47,18 @@
     <ClInclude Include="ex.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="VisualTool.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="test.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="pilot_instruction.txt">
+      <Filter>리소스 파일</Filter>
+    </Text>
+    <Text Include="idea.txt">
       <Filter>리소스 파일</Filter>
     </Text>
   </ItemGroup>

@@ -55,14 +55,12 @@ void MoonLander_thrusterPitch() {
 }
 void MoonLander_phsics(double dt) {
 	dt = dt / 1000;
-
 	MoonLander_coordinate.X = 0.5 * MoonLander_coordinate.DDX * dt * dt + MoonLander_coordinate.DX * dt + MoonLander_coordinate.X;
 	MoonLander_coordinate.Y = 0.5 * MoonLander_coordinate.DDY * dt * dt + MoonLander_coordinate.DY * dt + MoonLander_coordinate.Y;
 	MoonLander_coordinate.Z = 0.5 * MoonLander_coordinate.DDZ * dt * dt + MoonLander_coordinate.DZ * dt + MoonLander_coordinate.Z;
 	MoonLander_coordinate.Roll = 0.5 * MoonLander_coordinate.DDRoll * dt * dt + MoonLander_coordinate.DRoll * dt + MoonLander_coordinate.Roll;
 	MoonLander_coordinate.Yaw = 0.5 * MoonLander_coordinate.DDYaw * dt * dt + MoonLander_coordinate.DYaw * dt + MoonLander_coordinate.Yaw;
 	MoonLander_coordinate.Pitch = 0.5 * MoonLander_coordinate.DDPitch * dt * dt + MoonLander_coordinate.DPitch * dt + MoonLander_coordinate.Pitch;
-
 	MoonLander_coordinate.DX = MoonLander_coordinate.DDX * dt + MoonLander_coordinate.DX;
 	MoonLander_coordinate.DY = MoonLander_coordinate.DDY * dt + MoonLander_coordinate.DY;
 	MoonLander_coordinate.DZ = MoonLander_coordinate.DDZ * dt + MoonLander_coordinate.DZ;
@@ -70,13 +68,6 @@ void MoonLander_phsics(double dt) {
 	MoonLander_coordinate.DYaw = MoonLander_coordinate.DDYaw * dt + MoonLander_coordinate.DYaw;
 	MoonLander_coordinate.DPitch = MoonLander_coordinate.DDPitch * dt + MoonLander_coordinate.DPitch;
 }
-void MoonLander_thrustDisperse(double dt) {
-	dt = dt / 1000;
-
-	thrusterX = thrusterX * exp(-dispersingR * dt);
-	thrusterY = thrusterY * exp(-dispersingR * dt);
-	thrusterZ = thrusterZ * exp(-dispersingR * dt);
-	thrusterRoll = thrusterRoll * exp(-dispersingR * dt);
-	thrusterYaw = thrusterYaw * exp(-dispersingR * dt);
-	thrusterPitch = thrusterPitch * exp(-dispersingR * dt);
+void MoonLander_thrustDisperse() {
+	thrusterX = 0; thrusterY = 0; thrusterZ = 0; thrusterRoll = 0; thrusterYaw = 0; thrusterPitch = 0;
 }

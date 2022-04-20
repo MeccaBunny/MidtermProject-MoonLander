@@ -3,6 +3,7 @@
 
 //ex
 int landed();
-int randint(int s, int e);
+int randint(int sn, int en);
+void end();
 
 #endif

@@ -19,7 +19,7 @@ void MoonLander_thrusterRoll();
 void MoonLander_thrusterYaw();
 void MoonLander_thrusterPitch();
 void MoonLander_phsics(double dt);
-void MoonLander_thrustDisperse(double dt);
+void MoonLander_thrustDisperse();
 
 //Sensor
 float MoonLander_surfaceSensor[8][8];

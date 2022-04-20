@@ -143,14 +143,19 @@
     <ClCompile Include="main.c" />
     <ClCompile Include="moon.c" />
     <ClCompile Include="moonlander.c" />
+    <ClCompile Include="test.c" />
+    <ClCompile Include="VisualTool.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ex.h" />
     <ClInclude Include="moon.h" />
     <ClInclude Include="moonlander.h" />
     <ClInclude Include="physic.h" />
+    <ClInclude Include="test.h" />
+    <ClInclude Include="VisualTool.h" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="idea.txt" />
     <Text Include="pilot_instruction.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

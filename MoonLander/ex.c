@@ -28,6 +28,24 @@ int landed() {
 	*/
 }
 
-int randint(int s, int e) {
-	return rand() % (e - s + 1) + s;
+int randint(int sn, int en)
+{
+	static int init = 0;
+	if (!init)
+	{
+		srand(time(NULL));
+		init = 1;
+	}
+	return rand() % (en - sn + 1) + sn;
+}
+
+double randd()
+{
+	return (double)rand() / RAND_MAX;
+}
+
+void end()
+{
+	textcolor(15);
+	gotoxy(0, 24); // h = 23
 }
