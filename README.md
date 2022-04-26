@@ -1,5 +1,4 @@
-# MidtermProject-MoonLander
-
+MidtermProject-MoonLander
 
 development process
 
